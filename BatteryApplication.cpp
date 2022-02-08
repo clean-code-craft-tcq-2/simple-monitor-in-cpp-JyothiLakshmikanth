@@ -1,6 +1,6 @@
 #include <assert.h>
 #include <iostream>
-#include <TestBattery.cpp>
+#include "TestBattery.h"
 
 using namespace std;
 
