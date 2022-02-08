@@ -12,7 +12,7 @@ void Battery::printWarning(string output)
 bool Battery::isBatteryOK(float temperature, float soc, float chargeRate)
 {
     return (checkTemperatureRange(temperature, &printWarning) && checkStateOfCharegeRange(soc, &printWarning)
-       && checkChargeRateRange(chargeRate, &printWarning))
+       && checkChargeRateRange(chargeRate, &printWarning));
 }
 
 bool Battery::checkTemperatureRange(float temperatue, void(*fnprint)(string))
