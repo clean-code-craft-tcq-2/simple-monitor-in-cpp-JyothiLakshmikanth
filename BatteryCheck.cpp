@@ -1,6 +1,7 @@
 #include <assert.h>
 #include <iostream>
 #include <string>
+
 using namespace std;
 
 #define MIN_TEMP 0
@@ -64,17 +65,4 @@ bool Battery::checkChargeRateRange(float rate, void(*fnprint)(string))
     }
     fnprint("CHARGE RATE");
     return false;
-}
-
-void testBattery(float temperature, float soc, float chargeRate, bool expected)
-{
-    Battery battery;
-    assert(battery.isBatteryOK(temperature, soc, chargeRate) == expected);
-}
-
-int main() {
-  testBattery(58, 60, 0.8, false);
-  testBattery(40, 80, 0.7, false);
-  testBattery(40, 60, 0.8, false);
-  testBattery(40, 60, 0.7, true);
 }
