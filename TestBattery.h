@@ -1,6 +1,6 @@
 #include <assert.h>
 #include <iostream>
-#include <BatteryCheck.cpp>
+#include "BatteryCheck.h"
 
 class TestBattery
 {
