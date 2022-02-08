@@ -11,14 +11,8 @@ void Battery::printWarning(string output)
 
 bool Battery::isBatteryOK(float temperature, float soc, float chargeRate)
 {
-    bool isOK = false;
-    if(checkTemperatureRange(temperature, &printWarning) && checkStateOfCharegeRange(soc, &printWarning)
+    return (checkTemperatureRange(temperature, &printWarning) && checkStateOfCharegeRange(soc, &printWarning)
        && checkChargeRateRange(chargeRate, &printWarning))
-    {
-        isOK = true;
-        cout << "ALL IS WELL !!!!" << ::std::endl;
-    }
-    return isOK;
 }
 
 bool Battery::checkTemperatureRange(float temperatue, void(*fnprint)(string))
